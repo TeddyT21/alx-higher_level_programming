@@ -1,8 +1,8 @@
 #!/usr/bin/node
+// converts a number from base 10 to another base passed as argument.
 
 exports.converter = function (base) {
-  function conv (nb) {
-    return nb.toString(base);
-  }
-  return conv;
+  return function (n) {
+    return (n.toString(base));
+  };
 };

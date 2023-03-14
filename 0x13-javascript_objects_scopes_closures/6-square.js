@@ -1,15 +1,17 @@
 #!/usr/bin/node
+// class Square that defines a square and inherits from Rectangle of 4-rectangle.js
 
-const Sqr = require('./5-square.js');
+const SquareBase = require('./5-square');
 
-module.exports = class Square extends Sqr {
+class Square extends SquareBase {
   charPrint (c) {
-    if (typeof c === 'undefined') {
-      this.print();
-    } else {
-      for (let i = 0; i < this.width; i++) {
-        console.log(c.repeat(this.height));
-      }
+    if (c === undefined) {
+      c = 'X';
+    }
+    for (let i = 0; i < this.height; i++) {
+      console.log(c.repeat(this.width));
     }
   }
-};
+}
+
+module.exports = Square;
