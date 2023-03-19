@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""List all states from a given db sorted in ascending order by id
+"""
+List all states from a given db sorted in ascending order by id
 """
 
 import MySQLdb
@@ -20,7 +21,3 @@ if __name__ == "__main__":
 
     cur.close()
     db.close()
-
-  """
-  db = MySQLdb.connect(host="localhost", user=argv[1], port=3306, passwd=argv[2], db=argv[3])
-  """
