@@ -2,9 +2,8 @@
 """
 List all states from a given db sorted in ascending order by id
 """
-
+import sys
 import MySQLdb
-from sys import argv
 
 if __name__ == "__main__":
     db = MySQLdb.connect(user=sys.argv[1],
